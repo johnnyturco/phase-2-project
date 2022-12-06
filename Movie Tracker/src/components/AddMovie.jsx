@@ -51,14 +51,14 @@ function handleSubmit(e) {
           onChange={handleChange}
         />
         <input
-          type="text"
+          type="number"
           name="year"
           placeholder="Release Year"
           value={formData.year}
           onChange={handleChange}
         />
         <input
-          type="text"
+          type="number"
           name="rating"
           placeholder="Rating"
           value={formData.rating}
