@@ -7,6 +7,66 @@ h2 {
   text-align: center;
 }
 
+/* NavBar */
+.navbar {
+  padding: 10px;
+}
+
+.navbar a {
+  margin: 0 10px;
+}
+
+/* Main Content (contains search & list) */
+main {
+  padding: 0 50px;
+}
+
+.search {
+  padding-right: 25px;
+}
+
+.search input {
+  width: 100%;
+}
+
+
+/* MovieList */
+.movie-table {
+  border-collapse: collapse;
+  margin: 25px auto;
+  font-size: 0.9em;
+  min-width: 700px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1)
+}
+
+.movie-table thead tr {
+  background-color: #009879;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.movie-table th,
+.movie-table td {
+  padding: 12px 15px;
+}
+
+.movie-table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.movie-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.movie-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+
+/* AddMovie Form */
 .add-movie-form {
   width: 500px;
   margin: 0 auto;
@@ -21,7 +81,10 @@ form {
 input, textarea {
   width: 300px;
   margin: 10px 0;
-  border: 1px solid rgb(95, 95, 95);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border: 2px solid #009879;
   padding: 10px;
   background-color: hsla(0, 0%, 0%, 0.06);
 }

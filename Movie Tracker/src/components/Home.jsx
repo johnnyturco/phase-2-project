@@ -12,9 +12,9 @@ export default function Home({movies, setMovies}){
   })
 
   return (
-    <div>
+    <main>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <MovieList movies={filteredMovies} />
-    </div>
+    </main>
   )
 }

@@ -8,7 +8,7 @@ export default function({movie}) {
     <tr>
       <td>{title}</td>
       <td>{year}</td>
-      <td>{favorite ? "Yes" : "No"}</td>
+      <td>{favorite ? "⭐️" : ""}</td>
       <td>{rating}</td>
       <td>{description}</td>
     </tr>

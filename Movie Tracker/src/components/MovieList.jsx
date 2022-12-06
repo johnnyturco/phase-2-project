@@ -8,8 +8,8 @@ export default function MovieList({movies}) {
   })
 
   return (
-    <table>
-      <tbody>
+    <table className="movie-table">
+      <thead>
         <tr>
           <th><h3>Title</h3></th>
           <th><h3>Year</h3></th>
@@ -17,6 +17,8 @@ export default function MovieList({movies}) {
           <th><h3>Rating</h3></th>
           <th><h3>Description</h3></th>
         </tr>
+      </thead>
+      <tbody>
         {mappedMovies}
       </tbody>
     </table>
