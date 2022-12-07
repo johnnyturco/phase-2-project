@@ -13,6 +13,7 @@ export default function Home({movies, setMovies}){
 
   return (
     <main>
+      <h2>Home</h2>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <MovieList movies={filteredMovies} />
     </main>

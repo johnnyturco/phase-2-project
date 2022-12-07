@@ -14,9 +14,9 @@ export default function Favorites({movies, setMovies}){
   // console.log(favoriteMovies)
 
   return (
-    <div>
-      <h1>Favorites</h1>
+    <main>
+      <h2>Favorites</h2>
       <MovieList movies={favoriteMovies} />
-    </div>
+    </main>
   )
 }

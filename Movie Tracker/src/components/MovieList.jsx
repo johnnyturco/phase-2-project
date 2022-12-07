@@ -10,12 +10,12 @@ export default function MovieList({movies}) {
   return (
     <table className="movie-table">
       <thead>
-        <tr>
-          <th><h3>Title</h3></th>
+        <tr style={{textAlign: "center"}}>
+          <th style={{textAlign: "left"}}><h3>Title</h3></th>
           <th><h3>Year</h3></th>
           <th><h3>Favorite</h3></th>
           <th><h3>Rating</h3></th>
-          <th><h3>Description</h3></th>
+          <th ><h3>Description</h3></th>
         </tr>
       </thead>
       <tbody>
