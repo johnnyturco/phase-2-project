@@ -7,12 +7,6 @@ export default function Favorites({movies, setMovies}){
     return movie.favorite === true
   })
 
-  // const favoriteMovieItem = favoriteMovies.map(movie => {
-  //   console.log(movie.title)
-  // })
-
-  // console.log(favoriteMovies)
-
   return (
     <main>
       <h2>Favorites</h2>
