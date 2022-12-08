@@ -108,6 +108,21 @@ main {
   font-weight: 600;
 }
 
+.movie-table button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: #509bfe3d;
+  color: #2563B3;
+  border-radius: 3px;
+  font-size: 18px;
+}
+
+.movie-table button:hover {
+  background-color: #509cfe;
+  color: #fff;
+}
+
 
 /* AddMovie Form */
 .add-movie-form {

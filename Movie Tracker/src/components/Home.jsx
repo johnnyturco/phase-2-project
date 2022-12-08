@@ -11,11 +11,17 @@ export default function Home({movies, setMovies}){
     return movie.title.toLowerCase().includes(searchQuery.toLowerCase())
   })
 
+  // Callback for DELETE
+  function handleMovieDelete(id) {
+    const updatedMovies = movies.filter(movie => movie.id !== id)
+    setMovies(updatedMovies)
+  }
+
   return (
     <main>
       <h2>Home</h2>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <MovieList movies={filteredMovies} />
+      <MovieList movies={filteredMovies} onMovieDelete={handleMovieDelete} />
     </main>
   )
 }

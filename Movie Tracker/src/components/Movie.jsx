@@ -1,9 +1,16 @@
 import React from "react";
 
-export default function({movie}) {
+export default function({movie, onMovieDelete}) {
 
-  const {title, year, favorite, rating, description} = movie
+  const {id, title, year, favorite, rating, description} = movie
   const centerText = {textAlign: "center"}
+
+  function handleDelete() {
+    fetch(`http://localhost:3000/movies/${id}`, {
+      method: "DELETE"
+    })
+    onMovieDelete(id)
+  }
 
   return (
     <tr>
@@ -12,6 +19,7 @@ export default function({movie}) {
       <td style={centerText}>{favorite ? "⭐️" : ""}</td>
       <td style={centerText}>{rating}</td>
       <td>{description}</td>
+      <td><button onClick={handleDelete}>×</button></td>
     </tr>
   )
 }
