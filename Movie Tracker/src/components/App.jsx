@@ -22,13 +22,23 @@ function App() {
     })
   }
 
+  function handleFavoriteChange(updatedMovie) {
+    setMovies(prevMovies => prevMovies.map(movie => {
+      if(movie.id === updatedMovie.id) {
+        return updatedMovie;
+      } else {
+        return movie
+      }
+    }))
+  }
+
   return (
     <div>
       <NavBar />
       <Switch>
-        <Route path="/favorites"><Favorites movies={movies} setMovies={setMovies} /></Route>
+        <Route path="/favorites"><Favorites movies={movies} setMovies={setMovies} onFavoriteChange={handleFavoriteChange} /></Route>
         <Route path="/addmovie"><AddMovie onSubmit={handleSubmit} /></Route>
-        <Route path="/"><Home movies={movies} setMovies={setMovies} /></Route>
+        <Route path="/"><Home movies={movies} setMovies={setMovies} onFavoriteChange={handleFavoriteChange} /></Route>
       </Switch>
     </div>
   )

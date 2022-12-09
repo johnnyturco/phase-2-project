@@ -1,10 +1,10 @@
 import React from "react";
 import Movie from "./Movie";
 
-export default function MovieList({movies, onMovieDelete}) {
+export default function MovieList({movies, onMovieDelete, onFavoriteChange}) {
 
   const mappedMovies = movies.map(movie => {
-    return <Movie key={movie.id} movie={movie} onMovieDelete={onMovieDelete} />
+    return <Movie key={movie.id} movie={movie} onMovieDelete={onMovieDelete} onFavoriteChange={onFavoriteChange} />
   })
 
   return (

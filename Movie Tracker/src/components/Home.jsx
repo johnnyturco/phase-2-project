@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import MovieList from "./MovieList";
 import Search from "./Search";
 
-export default function Home({movies, setMovies}){
+export default function Home({movies, setMovies, onFavoriteChange}){
 
   const [searchQuery, setSearchQuery] = useState("")
 
@@ -21,7 +21,7 @@ export default function Home({movies, setMovies}){
     <main>
       <h2>Home</h2>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <MovieList movies={filteredMovies} onMovieDelete={handleMovieDelete} />
+      <MovieList movies={filteredMovies} onMovieDelete={handleMovieDelete} onFavoriteChange={onFavoriteChange} />
     </main>
   )
 }

@@ -81,7 +81,7 @@ function handleSubmit(e) {
           />
           <label htmlFor="favorite">Favorite</label>
         </div>
-        <button type="submit">Add Movie</button>
+        <button type="submit" className="add-movie-button">Add Movie</button>
       </form>
     </div>
   )
