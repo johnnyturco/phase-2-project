@@ -1,8 +1,11 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import MovieList from "./MovieList";
 import Search from "./Search";
+import {MoviesContext} from "../context"
 
-export default function Home({movies, setMovies, onFavoriteChange}){
+export default function Home({onFavoriteChange}){
+
+  const [movies, setMovies] = useContext(MoviesContext)
 
   const [searchQuery, setSearchQuery] = useState("")
 

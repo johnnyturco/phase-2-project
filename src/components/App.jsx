@@ -1,13 +1,14 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import {Route, Switch} from "react-router-dom"
 import NavBar from "./NavBar"
 import Home from "./Home"
 import Favorites from "./Favorites"
 import AddMovie from "./AddMovie"
+import { MoviesContext } from '../context'
 
 function App() {
 
-  const [movies, setMovies] = useState([])
+  const [movies, setMovies] = useContext(MoviesContext)
 
   // GET Request
   useEffect(() => {
@@ -36,9 +37,9 @@ function App() {
     <div>
       <NavBar />
       <Switch>
-        <Route path="/favorites"><Favorites movies={movies} setMovies={setMovies} onFavoriteChange={handleFavoriteChange} /></Route>
+        <Route path="/favorites"><Favorites onFavoriteChange={handleFavoriteChange} /></Route>
         <Route path="/addmovie"><AddMovie onSubmit={handleSubmit} /></Route>
-        <Route path="/"><Home movies={movies} setMovies={setMovies} onFavoriteChange={handleFavoriteChange} /></Route>
+        <Route path="/"><Home onFavoriteChange={handleFavoriteChange} /></Route>
       </Switch>
     </div>
   )
